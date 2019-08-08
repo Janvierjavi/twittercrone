@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= image_tag("t.png", class: "logo") %>my new post is:</strong>
+  <%= @twitt.content %>
+</p>
+
+<button><%= link_to 'Back', edit_twitt_path(@twitt) %></button>
+<button><%= link_to 'Confim', twitts_path %></button>

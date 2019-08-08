@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="tables">
+<table >
+  <thead>
+    <tr>
+     <th><%= image_tag("per.png", class: "logo") %></th> <th>your post</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twitts.each do |twitt| %>
+      <tr >
+        <td><%= twitt.content %></td>
+        <td><button><%= link_to 'Edit', edit_twitt_path(twitt) %></td></button>
+        <td><button><%= link_to 'Delete', twitt, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
+      </tr>
+    <% end %>
+  </tbody>
+  <button><%= link_to 'New post', new_twitt_path %></button>
+</table>
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter</title>
+   
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <ul>
+  <%= image_tag("t.png", class: "logo") %>
+
+    <li class="left"><a href="#">Twitter Account</a></li>
+    <li class="right"><a href="#">Sign up</a></li>
+    <li class="right"><a href="#">Login</a></li>
+  </ul>
+</header>
+
+ <div class="form1">
+    <%= yield %>
+    </div>
+    
+    <div class="footer">
+    <p>&copy;twitter clone task</p>
+  </div>
+    
+  </body>
+</html>
